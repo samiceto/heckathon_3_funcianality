@@ -6,7 +6,7 @@ import Shop from '../Components/Shop'
 import { CartContext } from '../Components/Context'
 import checkout from '@/action/checkout'
 
-const page = () => {
+const Page = () => {
     let shop={
         heading:'checkout',
         first:'Home',
@@ -150,4 +150,4 @@ console.log("cart",obj.cart)
   )
 }
 
-export default page
+export default Page

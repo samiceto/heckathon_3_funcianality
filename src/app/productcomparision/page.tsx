@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation'
 import { nextImageLoaderRegex } from 'next/dist/build/webpack-config'
 
 
-const page = () => {
+const Page = () => {
   const router=useRouter()
   const obj:any=useContext(CartContext)
       let shop={
@@ -96,4 +96,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

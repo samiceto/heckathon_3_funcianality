@@ -75,7 +75,7 @@ const subtotal= obj.cart.reduce((acc:any,item:any,index:number)=>{
                 </div>
                 {productavailable ? (obj.cart.map((item:any,index:any)=>{
                     return(
-                        <div >
+                        <div key={item.id}>
                              <div className='md:w-[817px] w-[90vw] h-[105px] flex items-center justify-between mx-auto'>
                 <Image src={item.image} alt="" width={150} height={150} className='md:w-[105px] w-[70px] rounded-lg'></Image>
                 <p className='text-gray-500 text-[12px]'>Rs. {item.price}</p>
