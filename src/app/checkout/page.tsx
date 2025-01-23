@@ -92,7 +92,7 @@ console.log("cart",obj.cart)
                 </div>
         {obj.cart.map((item:any)=>{
             return(
-                <div className='w-full'>
+                <div className='w-full' key={item.id}>
                     <div className='flex gap-5 justify-between w-full'>
                     <h1 className='text-gray-500'>{item.name}</h1>
                     <h1 className='text-gray-500'>{item.qnty} x</h1>
