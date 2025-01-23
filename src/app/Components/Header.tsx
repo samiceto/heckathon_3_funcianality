@@ -86,7 +86,7 @@ const Header = (props:any) => {
         <DropdownMenuSeparator />
         {obj.cart.map((item:any)=>{
           return(
-            <div key={item._id}>
+            <div key={item.id}>
               <DropdownMenuItem className="flex justify-between">
         <Image src={item.image} width={100} height={100} alt="/" className='w-[108px] h-[105px] my-2 bg-[#B88E2F] bg-opacity-40 rounded-lg '></Image>
         <div>
@@ -140,7 +140,7 @@ const Header = (props:any) => {
         <DropdownMenuSeparator />
         {obj.cart.map((item:any)=>{
           return(
-            <div key={item._id}>
+            <div key={item.id}>
               <DropdownMenuItem className="flex justify-between">
         <Image src={item.image} width={100} height={100} alt="/" className='w-[108px] h-[105px] my-2 bg-[#B88E2F] bg-opacity-40 rounded-lg '></Image>
         <div>
