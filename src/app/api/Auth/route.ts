@@ -13,8 +13,13 @@ export async function POST(req:NextRequest){
             })
         }
     }
-    catch(error:any){
-        return NextResponse.json
+    catch (error) {
+       
+        return NextResponse.json(
+          {
+            error: "An unexpected error occurred.",
+          },
+          { status: 500 } 
+        );
+      }
     }
-
-}
