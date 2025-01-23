@@ -6,7 +6,8 @@ import Icon from '../Components/Icon'
 import Shop from '../Components/Shop'
 import { CartContext } from '../Components/Context'
 
-const page = () => {
+const Page = () => {
+
 const obj:any=useContext(CartContext)
 
 const [quntities,setquantities]=useState(
@@ -117,4 +118,4 @@ const subtotal= obj.cart.reduce((acc:any,item:any,index:number)=>{
   )
 }
 
-export default page
+export default Page
