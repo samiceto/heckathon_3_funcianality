@@ -133,7 +133,7 @@ const Header = (props:any) => {
                 <Image src="/search.png" alt="" width={24} height={24} className='w-[20px] absolute right-0'></Image>
             </div>
             <div className={`${obj.wish.length !== 0 ? 'bg-red-500   rounded-full  flex items-center '  : ''}`}><Link href="/wishlist">{props.heart}</Link></div>
-            <div className='text-gray-800 mt-2 relative'><ShoppingCart className="w-[18px]"/>
+            <div className='text-gray-800 mt-2 relative'><Link href="/cart"><ShoppingCart className="w-[18px]"/></Link>
     {obj.cart && obj.cart.length > 0 && (
     <div className="bg-red-500 rounded-full h-[18px] w-[18px] absolute -top-3 -right-3 text-white text-xs flex items-center justify-center font-bold">
       {obj.cart.length}
