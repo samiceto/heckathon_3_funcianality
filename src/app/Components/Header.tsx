@@ -28,7 +28,7 @@ const Header = (props:any) => {
     <div className='hidden  w-[100vw] h-[100px] md:flex justify-between items-center px-[30px]'>
         <div className='flex items-center gap-4'>
         <Image src="/logo.png" alt="" width={50} height={50} className='w-[50px]'></Image>
-            <h1 className='text-[34px] font-bold inter2'>Furniro</h1></div>
+            <h1 className='text-[34px] font-bold inter2'>Perfuma</h1></div>
         <div className='flex text-[16px]'>
         <Menubar>
   <MenubarMenu>
@@ -122,7 +122,7 @@ const Header = (props:any) => {
       <div className='flex justify-between px-2 w-full'>
         <div className='flex items-center gap-4 w-fit '>
         <Image src="/logo.png" alt="" width={50} height={50} className='w-[35px]'></Image>
-            <h1 className='text-[22px] font-bold inter2'>Furniro</h1></div>
+            <h1 className='text-[22px] font-bold inter2'>Perfuma</h1></div>
             </div>
         <div className='flex items-center gap-4 w-fit justify-between mx-auto'>
         <div className='text-gray-800 '>{props.cart2}</div>
@@ -132,32 +132,8 @@ const Header = (props:any) => {
             <input value={ obj.searchQuery} placeholder='search' onChange={(e)=>obj.setsearchQuery(e.target.value)} className='w-[50vw]'/>
                 <Image src="/search.png" alt="" width={24} height={24} className='w-[20px] absolute right-0'></Image>
             </div>
-            <div className='w-[20px]'>{props.heart}</div>
-            <div className='text-gray-800 mt-2 relative'>{<DropdownMenu>
-      <DropdownMenuTrigger><ShoppingCart className="w-[18px]"/></DropdownMenuTrigger>
-      <DropdownMenuContent className="text-black bg-white  px-7">
-        <DropdownMenuLabel className="flex gap-24"><p className="text-[24px] font-semibold">Shopping Cart</p> <ShoppingBag /></DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        {obj.cart.map((item:any)=>{
-          return(
-            <div key={item.id}>
-              <DropdownMenuItem className="flex justify-between">
-        <Image src={item.image} width={100} height={100} alt="/" className='w-[108px] h-[105px] my-2 bg-[#B88E2F] bg-opacity-40 rounded-lg '></Image>
-        <div>
-          <div><p>{item.title}</p></div>
-          <div className="flex gap-3"><span>{item.qnty}</span><span>x</span><span className="text-[#B88E2F]">Rs. {item.price}</span></div>
-        </div>
-        <div>
-        <CircleX color="#595959" />
-        </div>
-        </DropdownMenuItem>
-            </div>
-          )
-        })}
-        <DropdownMenuSeparator className="mt-16"/>
-        <DropdownMenuItem className=" flex gap-4"><span className=" px-4 py-1 border-[1.2px] border-black rounded-full"><Link href="/cart">Cart</Link></span ><span className=" px-4 py-1 border-[1.2px] border-black rounded-full"><Link href="/checkout">Checkout</Link></span><span  className=" px-4 py-1 border-[1.2px] border-black rounded-full"><Link href="/productcomparision">Comparison</Link></span></DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>}
+            <div className={`${obj.wish.length !== 0 ? 'bg-red-500   rounded-full  flex items-center '  : ''}`}><Link href="/wishlist">{props.heart}</Link></div>
+            <div className='text-gray-800 mt-2 relative'>
     {obj.cart && obj.cart.length > 0 && (
     <div className="bg-red-500 rounded-full h-[18px] w-[18px] absolute -top-3 -right-3 text-white text-xs flex items-center justify-center font-bold">
       {obj.cart.length}
