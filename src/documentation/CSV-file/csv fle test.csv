@@ -1,0 +1,11 @@
+Test Case ID,Test Case Description,Test Steps,Expected Result,Actual Result,Status,Severity Level,Assigned To,Remarks
+TC001,Validate product listing page,Open product page > Verify products,Products displayed correctly,Products displayed correctly,Passed,None,-,No issues found
+TC002,Test API error handling,Disconnect API > Refresh page,Show fallback UI with error message,Error message shown,Passed,None,-,Handled gracefully
+TC003,Check cart functionality,Add product to cart > Verify cart contents,Cart updates with added product,Cart updates as expected,Passed,None,-,Works as expected
+TC004,Ensure responsiveness on mobile,Resize browser window > Check layout,Layout adjusts properly to screen size,Responsive layout working as intended,Minner issue,Low,-,Test successful
+TC005,Data Update to sanity,Checkout ,User and Order Created,Works as aspected,Passed,None,,No issues found
+TC006,User Navigate to addmin penel ,Login as admin,Redirec to admin penal,Works as aspected,Passed,None,-,No issues found
+TC007,Price range slider and category filter,Implement filteration,Show the filtered products ,Works as aspected,Passed,None,-,No issues found
+TC008,Cypress test,Run cypress test,Pass ,Works as aspected,passed,None,-,Test successful
+TC009,Lighthouse test,Lighthouse,Go Green for each aspect ,80% sucsessfull,Passed,Low,-,Medium performance
+TC010,Security test,Zap run,Will be medium risks,as aspected,Minner issue,Middle,-,9 alurts 3 medium
